@@ -1,23 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import Source from './components/sources/Source';
+import Volume from './components/sources/Volume';
+import AaPersons from './components/people/AaPersons';
+import { Routes, Route, Link } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+    <div >
+      <h1>AAERNE (Page Title)</h1>
+
+      <header id="header">
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          <Link to='/people'>African Americans</Link> | 
+          <a href="/">Other People/Owners</a> | 
+          <Link to='/source'>Sources</Link> | 
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <p class="breadcrumbs">
+          breadcrumbs
+        </p>
       </header>
+      <Routes>
+        <Route path='people' element={<AaPersons />} />
+        <Route path='source' element={<Source />} />
+        <Route path='volume' element={<Volume />} />
+      </Routes>
     </div>
   );
 }

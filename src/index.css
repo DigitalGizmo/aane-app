@@ -1,13 +1,108 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	padding: 2% 5% 5% 5%;
+	background-color: #faf6ef;
+	font-family: 'Arial Narrow', Arial, Helvetica, sans-serif;
+	font-size: medium;
+	color: #333333;
+}
+section {clear: both; margin-top: 5em;}
+
+/*style for heads and subheads*/
+h1, h2, h3 {	color: #171849; font-weight: bold;	}
+h1 {	font-size: 150%;	}
+h2 {	font-size: 120%; margin-top: 2em;	}
+h3	{	font-size: 100%;	}
+
+ul.horiz li	{float: left; margin-right: 2em;}
+
+/*style for basic text elements*/
+p, li, blockquote {	font-size: 1em; line-height: 1.75em;	}
+table, th, td, dl {	font-size: .9em; line-height: 1.75em;	}
+
+table 	{ width: 100%;	}
+th		{ text-align: left;	}
+td 		{ border-bottom: 1px dotted silver; border-left: 1px dotted silver; padding: 3px; }
+td.sm 	{ width: 3%;}
+td.med 	{ width: 6%;}
+td.medplus 	{ width: 10%;}
+td.medlrg { width: 15%;}
+td.lrg	{ width: 30%;}
+td.xlrg { width: 50%;}
+
+dl {line-height: 1.5em; margin-bottom: 0;}
+dt {float: left; padding-right: .5em; clear: left; width: 150px}
+dd {font-weight: bold;}
+dd:after {content: "."; color: #faf6ef;}
+
+ul.unstyledlist	{list-style-type: none; padding-left: 0;}
+ul.unstyledlist li	{ line-height: 1.5em;}
+
+.small	{	font-size: .75em; }
+.faint	{color: #bbb; margin-top: 4em;}
+.breadcrumbs	{font-size: .8em;}
+/*style for links*/
+a:link		{	color: #333399; text-decoration: none;	}
+a:visited	{	color: #666699; text-decoration: none;	}
+a:hover		{	text-decoration: underline;	}
+nav ul	{
+	list-style-type: none;
+	font-size: 85%;
+	font-weight: normal;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* For large pop ups -- required */
+.lightbox {
+  position: fixed;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(./assets/overlay.png) repeat;
+  z-index: 99;
+}
+
+/* shared styles for all pop ups  */
+.slimpop-wrapper {
+  background-color: #E6E7D8;  
+  border: 1px solid #BDBEA7;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.75);
+  color: #353626;
+  overflow:  auto;
+  padding: 2em;
+  position: relative;
+}
+
+.entry-pop {/* Large Pop Ups for Visual Record and Slide Shows */
+  height: 90%;
+  margin: 5% auto;
+  text-align: center;
+  width: 60%;
+}
+
+.pop-nav {
+  float: right;
+  font-size: .7em;
+  letter-spacing: .05em;
+  max-width: 25%;
+}
+
+/* Don hack */
+.source-image {
+  height: 100%;
+  /* margin: 5% auto;
+  text-align: left;
+  width: 60%; */
+}
+
+.image-container {
+	border: 1px solid #BDBEA7;
+	height: 90%;
+}
+
+.top-shade {
+	position: absolute;
+	background: url(./assets/overlay.png) repeat;
+	border: 1px solid #BDBEA7;
+	top: 0px;
+	height: 80vh;
 }
